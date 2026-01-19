@@ -1,3 +1,5 @@
+import "../style.css";
+
 import type { ToolPlugin } from "gui-chat-protocol/vue";
 import type { MusicToolData, MusicArgs } from "../core/types";
 import { TOOL_DEFINITION, showMusic } from "../core/plugin";
