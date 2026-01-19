@@ -1,5 +1,7 @@
 # @gui-chat-plugin/music
 
+[![npm version](https://badge.fury.io/js/%40gui-chat-plugin%2Fmusic.svg)](https://www.npmjs.com/package/@gui-chat-plugin/music)
+
 MusicXML sheet music plugin for GUI Chat applications. Displays and plays sheet music from MusicXML format.
 
 ## Features
@@ -84,6 +86,14 @@ yarn build
 # Lint
 yarn lint
 ```
+
+## Test Prompts
+
+Try these prompts to test the plugin:
+
+1. "Create sheet music for a simple C major scale"
+2. "Write a short melody in G major"
+3. "Generate sheet music for Twinkle Twinkle Little Star"
 
 ## License
 
