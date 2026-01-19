@@ -20,11 +20,16 @@ yarn add @gui-chat-plugin/music
 ### Vue Integration
 
 ```typescript
-import { plugin } from "@gui-chat-plugin/music/vue";
-import "@gui-chat-plugin/music/style.css";
+// In src/tools/index.ts
+import MusicPlugin from "@gui-chat-plugin/music/vue";
 
-// Register the plugin with your GUI Chat application
-registerPlugin(plugin);
+const pluginList = [
+  // ... other plugins
+  MusicPlugin,
+];
+
+// In src/main.ts
+import "@gui-chat-plugin/music/style.css";
 ```
 
 ### Core-only Usage
