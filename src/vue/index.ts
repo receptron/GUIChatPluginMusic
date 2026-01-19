@@ -18,3 +18,5 @@ export const plugin: ToolPlugin<MusicToolData, unknown, MusicArgs> = {
 export { showMusic as executeMusic } from "../core/plugin";
 export * from "../core/types";
 export { TOOL_DEFINITION } from "../core/definition";
+
+export default { plugin };
