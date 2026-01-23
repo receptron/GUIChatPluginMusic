@@ -1,6 +1,6 @@
 {
   "name": "@gui-chat-plugin/music",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "MusicXML sheet music plugin for GUI Chat",
   "type": "module",
   "main": "./dist/index.cjs",
