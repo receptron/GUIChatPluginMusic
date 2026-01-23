@@ -37,7 +37,7 @@
     "vue": "^3.5.0"
   },
   "dependencies": {
-    "gui-chat-protocol": "^0.0.1",
+    "gui-chat-protocol": "^0.0.3",
     "opensheetmusicdisplay": "^1.9.3",
     "osmd-audio-player": "^0.7.0"
   },
