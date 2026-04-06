@@ -18,7 +18,7 @@ export default defineConfig({
         `${entryName}.${format === "es" ? "js" : "cjs"}`,
     },
     rollupOptions: {
-      external: ["vue", "opensheetmusicdisplay", "osmd-audio-player"],
+      external: ["vue", "opensheetmusicdisplay", "@isamu/osmd-audio-player"],
       output: {
         exports: "named",
         globals: {
