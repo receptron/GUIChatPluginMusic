@@ -41,7 +41,9 @@
   },
   "dependencies": {
     "@isamu/osmd-audio-player": "^1.0.0",
-    "gui-chat-protocol": "^0.0.4"
+    "gui-chat-protocol": "^0.0.4",
+    "jspdf": "^4.2.1",
+    "svg2pdf.js": "^2.7.0"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
