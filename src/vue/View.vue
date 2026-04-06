@@ -41,7 +41,7 @@ import { ref, onMounted, watch, onUnmounted } from "vue";
 import type { ToolResult } from "gui-chat-protocol/vue";
 import type { MusicToolData } from "../core/types";
 import { OpenSheetMusicDisplay } from "opensheetmusicdisplay";
-import PlaybackEngine from "osmd-audio-player";
+import PlaybackEngine from "@isamu/osmd-audio-player";
 
 const props = defineProps<{
   selectedResult: ToolResult<MusicToolData>;
