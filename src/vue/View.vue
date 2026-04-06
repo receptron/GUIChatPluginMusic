@@ -16,6 +16,14 @@
           <span class="text-xl">{{ isPlaying ? "⏹" : "▶" }}</span>
           {{ isPlaying ? "Stop" : "Play" }}
         </button>
+        <button
+          @click="handleDownloadPdf"
+          :disabled="!isLoaded || isExporting"
+          class="px-4 py-2 text-white bg-green-600 rounded disabled:bg-gray-300 disabled:cursor-not-allowed flex items-center gap-1"
+        >
+          <span class="text-xl">⬇</span>
+          {{ isExporting ? "Exporting..." : "PDF" }}
+        </button>
         <label class="flex items-center gap-2">
           Tempo
           <input
@@ -42,6 +50,8 @@ import type { ToolResult } from "gui-chat-protocol/vue";
 import type { MusicToolData } from "../core/types";
 import { OpenSheetMusicDisplay } from "opensheetmusicdisplay";
 import PlaybackEngine from "@isamu/osmd-audio-player";
+import { jsPDF } from "jspdf";
+import { svg2pdf } from "svg2pdf.js";
 
 const props = defineProps<{
   selectedResult: ToolResult<MusicToolData>;
@@ -54,6 +64,7 @@ let player: any = null;
 
 const isLoaded = ref(false);
 const isPlaying = ref(false);
+const isExporting = ref(false);
 const tempo = ref(200);
 const loop = ref(false);
 const metronome = ref(false);
@@ -115,6 +126,46 @@ const renderMusic = async () => {
     if (musicContainer.value) {
       musicContainer.value.innerHTML = `<div class="text-red-500">Error rendering sheet music: ${error instanceof Error ? error.message : "Unknown error"}</div>`;
     }
+  }
+};
+
+const handleDownloadPdf = async () => {
+  if (!musicContainer.value || !isLoaded.value) return;
+
+  const svgElement = musicContainer.value.querySelector("svg");
+  if (!svgElement) return;
+
+  isExporting.value = true;
+  try {
+    const svgWidth = svgElement.viewBox.baseVal.width || svgElement.clientWidth;
+    const svgHeight =
+      svgElement.viewBox.baseVal.height || svgElement.clientHeight;
+
+    const orientation = svgWidth > svgHeight ? "landscape" : "portrait";
+    const doc = new jsPDF({ orientation, unit: "pt", format: "a4" });
+
+    const pageWidth = doc.internal.pageSize.getWidth();
+    const pageHeight = doc.internal.pageSize.getHeight();
+    const scale = Math.min(pageWidth / svgWidth, pageHeight / svgHeight);
+    const scaledWidth = svgWidth * scale;
+    const scaledHeight = svgHeight * scale;
+    const offsetX = (pageWidth - scaledWidth) / 2;
+    const offsetY = (pageHeight - scaledHeight) / 2;
+
+    await svg2pdf(svgElement, doc, {
+      x: offsetX,
+      y: offsetY,
+      width: scaledWidth,
+      height: scaledHeight,
+    });
+
+    const title = props.selectedResult.title || "sheet-music";
+    const filename = `${title.replace(/[^a-zA-Z0-9]/g, "_")}.pdf`;
+    doc.save(filename);
+  } catch (error) {
+    console.error("Error exporting PDF:", error);
+  } finally {
+    isExporting.value = false;
   }
 };
 
