@@ -171,15 +171,6 @@
   dependencies:
     minipass "^7.0.4"
 
-"@isamu/osmd-audio-player@^1.0.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@isamu/osmd-audio-player/-/osmd-audio-player-1.0.0.tgz#914c1531076e0263e72241a85169204c835331cd"
-  integrity sha512-JvNpoOsNOUuz4hLlKTKjErvoqKnEy0ECgC/oQDD+JiPRUxeZCYFgFIMXtBAiiS5VDgWI2GD+JNhuPQRtxXCBjA==
-  dependencies:
-    opensheetmusicdisplay "^1.9.7"
-    soundfont-player "^0.12.0"
-    standardized-audio-context "^25.3.77"
-
 "@jridgewell/gen-mapping@^0.3.5":
   version "0.3.13"
   resolved "https://registry.yarnpkg.com/@jridgewell/gen-mapping/-/gen-mapping-0.3.13.tgz#6342a19f44347518c93e43b1ac69deb3c4656a1f"
@@ -213,6 +204,15 @@
   dependencies:
     "@jridgewell/resolve-uri" "^3.1.0"
     "@jridgewell/sourcemap-codec" "^1.4.14"
+
+"@modernized/osmd-audio-player@^1.0.0":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@modernized/osmd-audio-player/-/osmd-audio-player-1.0.1.tgz#a18217d508225d0eb79a6102b6d302e2b0084549"
+  integrity sha512-rCQMuRDA3DasUZZr7MOSpHaGYSPzKFZmHUX5De4HSK+UE/eP3SABhGdBaHtZagosI8RweV61b5y+ZS70RxNvDQ==
+  dependencies:
+    opensheetmusicdisplay "^1.9.7"
+    soundfont-player "^0.12.0"
+    standardized-audio-context "^25.3.77"
 
 "@napi-rs/wasm-runtime@^1.1.1":
   version "1.1.3"

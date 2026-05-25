@@ -49,7 +49,7 @@ import { ref, onMounted, watch, onUnmounted } from "vue";
 import type { ToolResult } from "gui-chat-protocol/vue";
 import type { MusicToolData } from "../core/types";
 import { OpenSheetMusicDisplay } from "opensheetmusicdisplay";
-import PlaybackEngine from "@isamu/osmd-audio-player";
+import PlaybackEngine from "@modernized/osmd-audio-player";
 import { jsPDF } from "jspdf";
 import { svg2pdf } from "svg2pdf.js";
 

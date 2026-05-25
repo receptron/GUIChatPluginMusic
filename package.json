@@ -40,7 +40,7 @@
     "vue": "^3.5.0"
   },
   "dependencies": {
-    "@isamu/osmd-audio-player": "^1.0.0",
+    "@modernized/osmd-audio-player": "^1.0.0",
     "gui-chat-protocol": "^0.3.3",
     "jspdf": "^4.2.1",
     "svg2pdf.js": "^2.7.0"
