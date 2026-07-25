@@ -14,8 +14,11 @@ MusicXML sheet music plugin for GUI Chat applications. Displays and plays sheet 
 ## Installation
 
 ```bash
-yarn add @gui-chat-plugin/music
+yarn add @gui-chat-plugin/music gui-chat-protocol
 ```
+
+> `gui-chat-protocol` is a peer dependency — install it alongside the plugin; the host application provides the runtime and this plugin only declares the compatible range.
+
 
 ## Usage
 
