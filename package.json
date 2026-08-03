@@ -1,6 +1,6 @@
 {
   "name": "@gui-chat-plugin/music",
-  "version": "1.5.0",
+  "version": "2.0.0",
   "description": "MusicXML sheet music plugin for GUI Chat",
   "type": "module",
   "main": "./dist/index.cjs",
@@ -38,7 +38,7 @@
   },
   "peerDependencies": {
     "vue": "^3.5.0",
-    "gui-chat-protocol": "^1.2.0"
+    "gui-chat-protocol": "^2.0.0"
   },
   "dependencies": {
     "@modernized/osmd-audio-player": "^1.0.2",
@@ -60,7 +60,7 @@
     "vue": "^3.5.40",
     "vue-eslint-parser": "^10.4.1",
     "vue-tsc": "^3.3.8",
-    "gui-chat-protocol": "^1.2.0"
+    "gui-chat-protocol": "^2.0.0"
   },
   "keywords": [
     "guichat",
