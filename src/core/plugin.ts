@@ -4,10 +4,7 @@ import { TOOL_DEFINITION } from "./definition";
 
 export type MusicResult = ToolResult<MusicToolData>;
 
-export const showMusic = async (
-  _context: ToolContext,
-  args: MusicArgs,
-): Promise<MusicResult> => {
+export const showMusic = async (_context: ToolContext, args: MusicArgs): Promise<MusicResult> => {
   try {
     const { musicXML, title } = args;
 
@@ -19,8 +16,7 @@ export const showMusic = async (
       message: "Sheet music displayed",
       title: title || "Sheet Music",
       data: { musicXML },
-      instructions:
-        "Acknowledge that the sheet music has been displayed to the user.",
+      instructions: "Acknowledge that the sheet music has been displayed to the user.",
     };
   } catch (error) {
     console.error("ERR: exception\n Music rendering failed", error);
