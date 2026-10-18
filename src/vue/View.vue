@@ -26,20 +26,11 @@
         </button>
         <label class="flex items-center gap-2">
           Tempo
-          <input
-            v-model.number="tempo"
-            type="number"
-            min="30"
-            max="300"
-            class="w-20 px-2 py-1 border border-gray-300 rounded"
-          />
+          <input v-model.number="tempo" type="number" min="30" max="300" class="w-20 px-2 py-1 border border-gray-300 rounded" />
           bpm
         </label>
       </div>
-      <div
-        ref="musicContainer"
-        class="flex-1 flex items-center justify-center bg-white rounded-lg p-4"
-      ></div>
+      <div ref="musicContainer" class="flex-1 flex items-center justify-center bg-white rounded-lg p-4"></div>
     </div>
   </div>
 </template>
@@ -138,8 +129,7 @@ const handleDownloadPdf = async () => {
   isExporting.value = true;
   try {
     const svgWidth = svgElement.viewBox.baseVal.width || svgElement.clientWidth;
-    const svgHeight =
-      svgElement.viewBox.baseVal.height || svgElement.clientHeight;
+    const svgHeight = svgElement.viewBox.baseVal.height || svgElement.clientHeight;
 
     const orientation = svgWidth > svgHeight ? "landscape" : "portrait";
     const doc = new jsPDF({ orientation, unit: "pt", format: "a4" });
