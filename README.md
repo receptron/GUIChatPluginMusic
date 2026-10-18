@@ -1,6 +1,7 @@
 # @gui-chat-plugin/music
 
 [![npm version](https://badge.fury.io/js/%40gui-chat-plugin%2Fmusic.svg)](https://www.npmjs.com/package/@gui-chat-plugin/music)
+[![scoria](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/receptron/GUIChatPluginMusic/badges/scoria.json)](https://github.com/receptron/GUIChatPluginMusic/actions/workflows/scoria.yml)
 
 MusicXML sheet music plugin for GUI Chat applications. Displays and plays sheet music from MusicXML format.
 
