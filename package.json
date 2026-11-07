@@ -37,7 +37,8 @@
     "format:check": "prettier --check \"{src,demo}/**/*.{ts,tsx,vue,json,css}\" \"*.{ts,js,json}\""
   },
   "resolutions": {
-    "tar": ">=7.5.7"
+    "tar": ">=7.5.7",
+    "minimatch": "^11.0.5"
   },
   "peerDependencies": {
     "gui-chat-protocol": "^2.3.0",
